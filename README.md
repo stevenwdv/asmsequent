@@ -10,7 +10,8 @@ It's not (made to be) particularly efficient, since it allocates all terms on th
 
 This was written for [flat assembler](https://flatassembler.net/) 1. Point the `inc` environment variable to the fasm `INCLUDE` directory when building. You can also open the `.fpr` project file with the [Fresh IDE](https://fresh.flatassembler.net/). In Fresh, you can set `inc` as an 'alias' via the IDE/project options.
 
-It works on x86-64 Windows and on Linux with Wine.
+You can [download](https://github.com/stevenwdv/asmsequent/releases/latest/download/asmsequent.exe) the binary via the releases page.
+It runs on x86-64 Windows and on Linux with Wine.
 
 The assembly files in the initial commit are the original ones from 2018, so they still contain some TODOs for stuff that could be done and some commented/unused legacy code.
 
