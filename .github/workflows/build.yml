@@ -1,0 +1,22 @@
+name: Build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: stevenwdv/setup-fasm@v1
+        with:
+          edition: fasm1
+      - run: fasm asmsequent.asm
+        env:
+          inc: ${{ env.INCLUDE }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: asmsequent.exe
+          path: asmsequent.exe
+          if-no-files-found: error
